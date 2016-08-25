@@ -1,6 +1,13 @@
 language: ruby
 rvm:
-- 2.0.0
-- 1.9.3
-- jruby-19mode
-- rbx-2
+- 2.3.0
+script:
+- bundle exec rails db:create
+- bundle exec rails db:migrate
+deploy:
+  provider: heroku
+  api_key:
+    secure: EJFl3sLXJKDQIeLwSDzkXVcEU1nYKgXhE0mDYDgH1XFLltFjJFCWZhkFnBMucr3ruSco4cMqRYHCbDLQP07rCcMRzfOLXmHE8HqLFohF3kn2C3gIHjeIEyvGrVvOAFnIv/moGONxLPgyFX4khuOA7nMMbQ6xYQwuRlzht1aII0hbRVm4WmCZ/Yx/veaT9VYMDgkCDQyG3aOC5cduRX7URDBMyzgKVjMaYG/NalkrBv536ktzk44+vv8ANcBC/amkxn4tSo3JFU8PDYJmWZGeEjYTpP0p8WQy5CzDNXa0OPN8ZphEmbsgvbLkXwaM8xYDna/WYiSWW/Y51NOP7h1FkYD4uCuF2vNECbji/vJEg88Hb86Ur5PB5AjG/RTIz3XRYo1sYWR0DiB6tJkRVgZ76Oo/VztFUj4gzD+QNuCD7/sScYa6yK6JNWt+PLyGWRA96cFqRFV7CjbUW7Cq76X565w+H5KF8Ym4ksdK6o4hVdUK55TPkPY3NM1M5xSvyIrPGb8J5UQYmzrPFzK6i0eeHpUJjXaztXDjaX89GTpEPSRVmK7rbs7hHsccWfZN7fCWP/eQVmqSAGuzEzdUn5jerRxpDQiz8h3L0kNZN45V0Ul1wkzlanT/36zCPLFrpgETowFcEpUin44Y6vShYCmgJM5+4q8MT3a67wVLnOxdjtM=
+  app: mynewcms
+  on:
+    repo: allenzhong/MyCMS
