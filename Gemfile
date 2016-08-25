@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'capybara'
+  gem 'cucumber-rails', :require => false
+  gem 'rspec-rails'
+  gem 'database_cleaner'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end

@@ -4,6 +4,8 @@ rvm:
 script:
 - bundle exec rails db:create
 - bundle exec rails db:migrate
+- bundle exec rspec
+- bundle exec cucumber
 deploy:
   provider: heroku
   api_key:
